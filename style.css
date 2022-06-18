@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap');
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
+}
+* {
+  margin: 0;
 }
 
 body {
@@ -10,7 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* overflow: hidden; */
+  overflow: auto;
   background-color: #000;
   margin: 0 auto;
   animation: fadeInAnimation ease-out 3s 1 forwards;
@@ -151,4 +156,10 @@ h1,
 
 .fa-trash-alt {
   color: red;
+}
+@media screen and (max-width: 600px) {
+  .container {
+    min-width: 100vw;
+    padding: 0;
+  }
 }
