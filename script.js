@@ -14,7 +14,7 @@ class UI {
     row.innerHTML = `
       <td>${book.title}</td>
       <td>${book.date}</td>
-      <td><a href="#" class="delete">X<a></td>
+      <td><a href="#" class="delete">❌<a></td>
     `;
 
     list.appendChild(row);

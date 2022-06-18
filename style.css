@@ -100,6 +100,7 @@ h1,
   font-weight: 400;
   font-size: 2rem;
   color: red;
+  margin-left: auto;
 }
 .success,
 .error {
@@ -124,6 +125,10 @@ h1,
   font-weight: 400;
   font-size: 2rem;
   color: red;
+  margin-left: auto;
+}
+#title {
+  height: 4.6rem;
 }
 #title,
 #date,
