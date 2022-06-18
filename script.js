@@ -13,7 +13,7 @@ class UI {
     // Insert cols
     row.innerHTML = `
       <td>${book.title}</td>
-      <td>${book.date}</td>
+      <td id="tableDate">${book.date}</td>
       <td><a href="#" class="delete">❌<a></td>
     `;
 
