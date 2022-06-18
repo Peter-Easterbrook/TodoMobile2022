@@ -18,6 +18,16 @@ body {
   overflow: auto;
   background-color: #000;
   margin: 0 auto;
+  background: radial-gradient(
+    circle at 50% 50%,
+    #120035,
+    #13002d,
+    #120026,
+    #10001e,
+    #0c0017,
+    #06000e,
+    #000000
+  );
   animation: fadeInAnimation ease-out 3s 1 forwards;
 }
 @keyframes fadeInAnimation {
@@ -71,7 +81,7 @@ h1,
   color: #fff;
   font-weight: 300;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 1rem;
+  padding: 3rem 2rem;
   border-radius: 0.5rem;
 }
 .table th {
@@ -81,21 +91,24 @@ h1,
 .table th:nth-child(2) {
   font-size: 2rem;
   font-weight: 400;
-  width: 20rem;
+  width: 18%;
 }
 #book-list td {
-  width: 100%;
   font-size: 1.5rem;
   font-weight: 300;
 }
 #book-list td:first-child {
-  max-width: 70%;
+  max-width: 76%;
+  margin: 0 auto;
+  padding: 0;
 }
-#tableDate {
-  width: 20%;
+#book-list td:nth-child(2) {
+  width: 18%;
+  margin: 0 auto;
+  padding: 0;
 }
 #book-list td:last-child {
-  width: 5%;
+  width: 6%;
   text-decoration: none;
   font-weight: 400;
   font-size: 2rem;
@@ -114,6 +127,7 @@ h1,
 .success {
   background-color: #08ff08;
   color: #000;
+  margin: 0.4rem 0;
 }
 .error {
   background-color: #e10600;
@@ -123,7 +137,7 @@ h1,
 .delete {
   text-decoration: none;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.4rem;
   color: red;
   margin-left: auto;
 }
@@ -166,5 +180,8 @@ h1,
   .container {
     min-width: 100vw;
     padding: 0;
+  }
+  .table {
+    background: transparent;
   }
 }
