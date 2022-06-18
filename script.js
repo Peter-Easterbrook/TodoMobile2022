@@ -1,7 +1,7 @@
 class Book {
-  constructor(title, time) {
+  constructor(title, date) {
     this.title = title;
-    this.time = time;
+    this.date = date;
   }
 }
 
@@ -13,7 +13,7 @@ class UI {
     // Insert cols
     row.innerHTML = `
       <td>${book.title}</td>
-      <td>${book.time}</td>
+      <td>${book.date}</td>
       <td><a href="#" class="delete">X<a></td>
     `;
 
@@ -48,7 +48,7 @@ class UI {
 
   clearFields() {
     document.getElementById('title').value = '';
-    document.getElementById('time').value = '';
+    document.getElementById('date').value = '';
   }
 }
 
@@ -84,11 +84,11 @@ class Store {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(time) {
+  static removeBook(date) {
     const books = Store.getBooks();
 
     books.forEach(function (book, index) {
-      if (book.time === time) {
+      if (book.date === date) {
         books.splice(index, 1);
       }
     });
@@ -104,18 +104,16 @@ document.addEventListener('DOMContentLoaded', Store.displayBooks);
 document.getElementById('book-form').addEventListener('submit', function (e) {
   // Get form values
   const title = document.getElementById('title').value,
-    time = document.getElementById('time').value;
+    date = document.getElementById('date').value;
 
   // Instantiate book
-  const book = new Book(title, time);
+  const book = new Book(title, date);
 
   // Instantiate UI
   const ui = new UI();
 
-  console.log(ui);
-
   // Validate
-  if (title === '' || time === '') {
+  if (title === '' || date === '') {
     // Error alert
     ui.showAlert('Please fill in all fields', 'error');
   } else {
