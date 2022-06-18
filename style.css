@@ -73,16 +73,24 @@ h1,
   font-size: 2rem;
   font-weight: 400;
 }
+.table th:nth-child(2) {
+  font-size: 2rem;
+  font-weight: 400;
+  width: 20rem;
+}
 #book-list td {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 300;
 }
-#book-list td:nth-child(2) {
-  max-width: 17rem;
+#book-list td:first-child {
+  max-width: 70%;
 }
-#book-list td:nth-child(3) {
-  width: 4rem;
+#book-list td:nth-child(2) {
+  width: 25%;
+}
+#book-list td:last-child {
+  width: 5%;
   text-decoration: none;
   font-weight: 400;
   font-size: 2rem;
