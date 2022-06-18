@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/93b32f94da.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Todo List UI</title>
+  </head>
+  <body id="vantajs">
+    <div class="container">
+      <h1>Todos</h1>
+      <form id="book-form" class="form">
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" class="u-full-width" />
+        </div>
+        <div>
+          <label for="time">Time</label>
+          <input type="datetime-local" id="time" class="u-full-width" />
+        </div>
+        <button type="submit" id="submit" class="u-full-width">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+      <table class="u-full-width table">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Time</th>
+            <th class="trash"><i class="fas fa-trash-alt"></i></th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+    <script>
+      VANTA.GLOBE({
+        el: '#vantajs',
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x3f3fff,
+        backgroundColor: 0x0,
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
