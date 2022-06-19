@@ -77,6 +77,7 @@ h1,
 }
 .table {
   width: 100%;
+  max-width: 60rem;
   font-family: 'Mulish', sans-serif;
   color: #fff;
   font-weight: 300;
@@ -88,33 +89,16 @@ h1,
   font-size: 2rem;
   font-weight: 400;
 }
-.table th:nth-child(2) {
-  font-size: 2rem;
-  font-weight: 400;
-  width: 18%;
+.table th:last-child,
+.table td:last-child {
+  text-align: right;
 }
-#book-list td {
-  font-size: 1.5rem;
+
+.table td {
+  font-size: 1.6rem;
   font-weight: 300;
 }
-#book-list td:first-child {
-  max-width: 76%;
-  margin: 0 auto;
-  padding: 0;
-}
-#book-list td:nth-child(2) {
-  width: 18%;
-  margin: 0 auto;
-  padding: 0;
-}
-#book-list td:last-child {
-  width: 6%;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 2rem;
-  color: red;
-  margin-left: auto;
-}
+
 .success,
 .error {
   max-width: 20rem;
@@ -136,17 +120,17 @@ h1,
 
 .delete {
   text-decoration: none;
-  font-weight: 400;
   font-size: 1.4rem;
-  color: red;
   margin-left: auto;
 }
-#title {
+#title,
+#place {
   height: 4.6rem;
 }
 #title,
 #date,
-#time {
+#time,
+#place {
   padding: 1rem;
   font-size: 2rem;
   border-radius: 50px;
