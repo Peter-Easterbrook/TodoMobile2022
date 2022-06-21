@@ -13,7 +13,6 @@ class UI {
     // Insert cols
     row.innerHTML = `
       <td>${book.title}</td>
-      <td>${book.date}</td>
       <td><a href="#" class="delete">❌<a></td>
     `;
 
@@ -48,7 +47,6 @@ class UI {
 
   clearFields() {
     document.getElementById('title').value = '';
-    document.getElementById('date').value = '';
   }
 }
 
@@ -84,11 +82,11 @@ class Store {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(date) {
+  static removeBook(title) {
     const books = Store.getBooks();
 
     books.forEach(function (book, index) {
-      if (book.date === date) {
+      if (book.title === title) {
         books.splice(index, 1);
       }
     });
@@ -103,11 +101,11 @@ document.addEventListener('DOMContentLoaded', Store.displayBooks);
 // Event Listener for add book
 document.getElementById('book-form').addEventListener('submit', function (e) {
   // Get form values
-  const title = document.getElementById('title').value,
-    date = document.getElementById('date').value;
+  const title = document.getElementById('title').value;
+  // date = document.getElementById('date').value;
 
   // Instantiate book
-  const book = new Book(title, date);
+  const book = new Book(title);
 
   // Instantiate UI
   const ui = new UI();
