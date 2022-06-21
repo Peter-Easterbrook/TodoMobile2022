@@ -113,7 +113,7 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
   const ui = new UI();
 
   // Validate
-  if (title === '' || date === '') {
+  if (title === '') {
     // Error alert
     ui.showAlert('Please fill in all fields', 'error');
   } else {
