@@ -74,6 +74,9 @@ h1,
   font-weight: 300;
   font-size: 2rem;
 }
+.form .input {
+  margin-bottom: -2rem;
+}
 .table {
   width: 100%;
   max-width: 60rem;
@@ -166,5 +169,6 @@ h1,
   }
   .table {
     background: transparent;
+    margin-top: -4rem;
   }
 }
