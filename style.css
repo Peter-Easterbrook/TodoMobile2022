@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #0074d5 #000;
+  font-weight: 300;
+}
 *,
 ::after,
 ::before {
@@ -9,14 +16,18 @@
 }
 
 body {
-  font-family: 'Mulish', sans-serif;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  margin: 0 auto;
   overflow: auto;
   background-color: #000;
-  margin: 0 auto;
+  font-weight: 300;
+  user-select: none;
+  overflow: auto;
+  font-family: 'Encode Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
   background: radial-gradient(
     circle at 50% 50%,
     #120035,
@@ -27,7 +38,7 @@ body {
     #06000e,
     #000000
   );
-  animation: fadeInAnimation ease-out 3s 1 forwards;
+  animation: fadeInAnimation 2s ease-out 1 forwards;
 }
 @keyframes fadeInAnimation {
   0% {
@@ -37,19 +48,24 @@ body {
     opacity: 1;
   }
 }
-::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+html::-webkit-scrollbar {
+  display: none;
 }
-::-webkit-scrollbar-track {
-  background: #000;
+
+html::placeholder {
+  color: #050030;
+  opacity: 1; /* Firefox */
 }
-::-webkit-scrollbar-thumb {
-  background: #002aff;
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #5c77ff;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  font-weight: 300;
 }
 .container {
   max-width: 80rem;
@@ -67,11 +83,10 @@ h1,
   max-width: 50rem;
   font-family: 'Mulish', sans-serif;
   color: #fff;
-  font-weight: 300;
 }
 .form label {
   color: #fff;
-  font-weight: 300;
+
   font-size: 2rem;
 }
 .form .input {
@@ -82,14 +97,12 @@ h1,
   max-width: 60rem;
   font-family: 'Mulish', sans-serif;
   color: #fff;
-  font-weight: 300;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 3rem 2rem;
   border-radius: 0.5rem;
 }
 .table th {
   font-size: 2rem;
-  font-weight: 400;
 }
 .table th:last-child,
 .table td:last-child {
@@ -98,7 +111,6 @@ h1,
 
 .table td {
   font-size: 1.6rem;
-  font-weight: 300;
 }
 
 .success,
@@ -145,7 +157,6 @@ h1,
 #submit {
   background: rgb(0, 20, 42);
   color: #fff;
-  font-weight: 200;
   font-size: 1.5rem;
   border-radius: 50px;
   margin-top: 3rem;
