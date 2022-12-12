@@ -6,6 +6,9 @@ html {
   scrollbar-color: #0074d5 #000;
   font-weight: 300;
 }
+html, body {
+  background-color: #000;
+}
 *,
 ::after,
 ::before {
@@ -22,7 +25,6 @@ body {
   align-items: center;
   margin: 0 auto;
   overflow: auto;
-  background-color: #000;
   font-weight: 300;
   user-select: none;
   overflow: auto;
