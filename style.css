@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   overflow: auto;
-  font-weight: 300;
+  font-weight: 200;
   user-select: none;
   overflow: auto;
   font-family: 'Encode Sans', sans-serif;
@@ -81,14 +81,14 @@ h6 {
   font-family: 'Mulish', sans-serif;
   color: #fff;
 }
-.form * {
-  font-weight: 200;
-}
+
 .form label {
   color: #fff;
   font-size: 2rem;
+  font-weight: 200;
 }
 .form .input {
+  font-weight: 200;
   margin-bottom: -2rem;
 }
 .table {
