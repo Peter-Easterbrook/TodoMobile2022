@@ -1,4 +1,4 @@
-class Book {
+class Todo {
   constructor(title, date) {
     this.title = title;
     this.date = date;
@@ -6,13 +6,13 @@ class Book {
 }
 
 class UI {
-  addBookToList(book) {
-    const list = document.getElementById('book-list');
+  addTodoToList(todo) {
+    const list = document.getElementById('todo-list');
     // Create tr element
     const row = document.createElement('tr');
     // Insert cols
     row.innerHTML = `
-      <td>${book.title}</td>
+      <td>${todo.title}</td>
       <td><a href="#" class="delete">❌<a></td>
     `;
 
@@ -29,7 +29,7 @@ class UI {
     // Get parent
     const container = document.querySelector('.container');
     // Get form
-    const form = document.querySelector('#book-form');
+    const form = document.querySelector('#todo-form');
     // Insert alert
     container.insertBefore(div, form);
 
@@ -39,7 +39,7 @@ class UI {
     }, 3000);
   }
 
-  deleteBook(target) {
+  deleteTodo(target) {
     if (target.className === 'delete') {
       target.parentElement.parentElement.remove();
     }
@@ -52,60 +52,60 @@ class UI {
 
 // Local Storage Class
 class Store {
-  static getBooks() {
-    let books;
-    if (localStorage.getItem('books') === null) {
-      books = [];
+  static getTodos() {
+    let todos;
+    if (localStorage.getItem('todos') === null) {
+      todos = [];
     } else {
-      books = JSON.parse(localStorage.getItem('books'));
+      todos = JSON.parse(localStorage.getItem('todos'));
     }
 
-    return books;
+    return todos;
   }
 
-  static displayBooks() {
-    const books = Store.getBooks();
+  static displayTodos() {
+    const todos = Store.getTodos();
 
-    books.forEach(function (book) {
+    todos.forEach(function (todo) {
       const ui = new UI();
 
       // Add book to UI
-      ui.addBookToList(book);
+      ui.addTodoToList(todo);
     });
   }
 
-  static addBook(book) {
-    const books = Store.getBooks();
+  static addTodo(todo) {
+    const todos = Store.getTodos();
 
-    books.push(book);
+    todos.push(todo);
 
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('todos', JSON.stringify(todos));
   }
 
-  static removeBook(title) {
-    const books = Store.getBooks();
+  static removeTodo(title) {
+    const todos = Store.getTodos();
 
-    books.forEach(function (book, index) {
-      if (book.title === title) {
-        books.splice(index, 1);
+    todos.forEach(function (todo, index) {
+      if (todo.title === title) {
+        todos.splice(index, 1);
       }
     });
 
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('todos', JSON.stringify(todos));
   }
 }
 
 // DOM Load Event
-document.addEventListener('DOMContentLoaded', Store.displayBooks);
+document.addEventListener('DOMContentLoaded', Store.displayTodos);
 
 // Event Listener for add book
-document.getElementById('book-form').addEventListener('submit', function (e) {
+document.getElementById('todo-form').addEventListener('submit', function (e) {
   // Get form values
   const title = document.getElementById('title').value;
   // date = document.getElementById('date').value;
 
   // Instantiate book
-  const book = new Book(title);
+  const todo = new Todo(title);
 
   // Instantiate UI
   const ui = new UI();
@@ -116,10 +116,10 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
     ui.showAlert('Please fill in all fields', 'error');
   } else {
     // Add book to list
-    ui.addBookToList(book);
+    ui.addTodoToList(todo);
 
     // Add to LS
-    Store.addBook(book);
+    Store.addTodo(todo);
 
     // Show success
     ui.showAlert('Todo added!', 'success');
@@ -132,15 +132,15 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
 });
 
 // Event Listener for delete
-document.getElementById('book-list').addEventListener('click', function (e) {
+document.getElementById('todo-list').addEventListener('click', function (e) {
   // Instantiate UI
   const ui = new UI();
 
   // Delete book
-  ui.deleteBook(e.target);
+  ui.deleteTodo(e.target);
 
   // Remove from LS
-  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  Store.removeTodo(e.target.parentElement.previousElementSibling.textContent);
 
   // Show message
   ui.showAlert('Todo removed!', 'success');

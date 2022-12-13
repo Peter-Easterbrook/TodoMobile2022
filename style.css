@@ -6,7 +6,8 @@ html {
   scrollbar-color: #0074d5 #000;
   font-weight: 300;
 }
-html, body {
+html,
+body {
   background-color: #000;
 }
 *,
@@ -22,7 +23,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 0 auto;
   overflow: auto;
   font-weight: 300;
@@ -71,24 +71,21 @@ h6 {
 }
 .container {
   max-width: 80rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
 }
 
-h1 {
-  padding-top: 2rem;
-}
-h1,
 .form {
   max-width: 50rem;
   font-family: 'Mulish', sans-serif;
   color: #fff;
 }
+.form * {
+  font-weight: 200;
+}
 .form label {
   color: #fff;
-
   font-size: 2rem;
 }
 .form .input {
@@ -103,8 +100,13 @@ h1,
   padding: 3rem 2rem;
   border-radius: 0.5rem;
 }
+.table * {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
 .table th {
   font-size: 2rem;
+  font-weight: 200;
 }
 .table th:last-child,
 .table td:last-child {
