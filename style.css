@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   margin: 0 auto;
   overflow: auto;
-  font-weight: 200;
+  font-weight: 300;
   user-select: none;
   overflow: auto;
   font-family: 'Encode Sans', sans-serif;
@@ -58,17 +58,7 @@ html::placeholder {
   color: #050030;
   opacity: 1; /* Firefox */
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-  hyphens: auto;
-  font-weight: 300;
-}
+
 .container {
   max-width: 80rem;
   display: grid;
@@ -82,15 +72,16 @@ h6 {
   color: #fff;
 }
 
-.form label {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 200;
-}
-.form .input {
-  font-weight: 200;
+.input-field {
+  font-weight: 300;
   margin-bottom: -2rem;
 }
+.input-field label {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 .table {
   width: 100%;
   max-width: 60rem;
@@ -101,12 +92,11 @@ h6 {
   border-radius: 0.5rem;
 }
 .table * {
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 .table th {
   font-size: 2rem;
-  font-weight: 200;
 }
 .table th:last-child,
 .table td:last-child {
