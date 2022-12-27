@@ -47,9 +47,13 @@
           <label for="title">Todo</label>
           <input type="text" id="title" class="u-full-width" />
         </div>
-        <!-- <div>
+        <div class="input-field">
           <label for="date">Date</label>
           <input type="date" id="date" class="u-full-width" />
+        </div>
+        <!-- <div class="input-field">
+          <label for="time">Time</label>
+          <input type="time" id="time" class="u-full-width" />
         </div> -->
         <button type="submit" id="submit" class="u-full-width">
           <i class="fas fa-highlighter"></i>
@@ -59,11 +63,11 @@
         <thead>
           <tr>
             <th>Todo</th>
-            <!-- <th>Date</th> -->
+            <th>Date</th>
             <th class="trash"><i class="fas fa-trash-alt"></i></th>
           </tr>
         </thead>
-        <tbody id="todo-list"></tbody>
+        <tbody id="todo-list" class="todo-list"></tbody>
       </table>
     </div>
     <script

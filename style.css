@@ -25,10 +25,10 @@ body {
   flex-direction: column;
   margin: 0 auto;
   overflow: auto;
-  font-weight: 300;
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: 200;
   user-select: none;
   overflow: auto;
-  font-family: 'Encode Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   background: radial-gradient(
     circle at 50% 50%,
@@ -73,13 +73,13 @@ html::placeholder {
 }
 
 .input-field {
-  font-weight: 300;
-  margin-bottom: -2rem;
+  font-weight: 200;
+  /* margin-bottom: -2rem; */
 }
 .input-field label {
   color: #fff;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 200;
 }
 
 .table {
@@ -88,23 +88,26 @@ html::placeholder {
   font-family: 'Mulish', sans-serif;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 3rem 2rem;
+  padding: 2rem;
   border-radius: 0.5rem;
 }
 .table * {
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 1px;
 }
 .table th {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+.table td {
+  font-size: clamp(1rem, 2vw, 1.6rem);
 }
 .table th:last-child,
 .table td:last-child {
   text-align: right;
 }
-
-.table td {
-  font-size: 1.6rem;
+.table th:first-of-type,
+.table td:first-of-type {
+  width: 70%;
 }
 
 .success,
@@ -132,28 +135,26 @@ html::placeholder {
   margin-left: auto;
 }
 #title,
-#place {
-  height: 4.6rem;
-}
-#title,
-#date,
-#time,
-#place {
+#date {
+  height: clamp(3.6, 5vw, 4.6rem);
   padding: 1rem;
-  font-size: 2rem;
   border-radius: 50px;
   box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
+
 .fa-highlighter {
   font-size: 2rem;
   color: #fff;
 }
 #submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgb(0, 20, 42);
   color: #fff;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   border-radius: 50px;
-  margin-top: 3rem;
+  margin: 1rem auto 0;
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
@@ -172,8 +173,15 @@ html::placeholder {
     min-width: 100vw;
     padding: 0;
   }
+  .u-full-width {
+    height: 4rem;
+  }
   .table {
     background: transparent;
-    margin-top: -4rem;
+    /* margin-top: -4rem; */
+  }
+  .table th:first-of-type,
+  .table td:first-of-type {
+    width: 55%;
   }
 }

@@ -12,7 +12,8 @@ class UI {
     const row = document.createElement('tr');
     // Insert cols
     row.innerHTML = `
-      <td>${todo.title}</td>
+      <td >${todo.title}</td>
+      <td>${todo.date}</td>
       <td><a href="#" class="delete">❌<a></td>
     `;
 
@@ -47,6 +48,8 @@ class UI {
 
   clearFields() {
     document.getElementById('title').value = '';
+    document.getElementById('date').value = '';
+    // document.getElementById('time').value = '';
   }
 }
 
@@ -69,7 +72,7 @@ class Store {
     todos.forEach(function (todo) {
       const ui = new UI();
 
-      // Add book to UI
+      // Add todo to UI
       ui.addTodoToList(todo);
     });
   }
@@ -82,11 +85,11 @@ class Store {
     localStorage.setItem('todos', JSON.stringify(todos));
   }
 
-  static removeTodo(title) {
+  static removeTodo(date) {
     const todos = Store.getTodos();
 
     todos.forEach(function (todo, index) {
-      if (todo.title === title) {
+      if (todo.date === date) {
         todos.splice(index, 1);
       }
     });
@@ -98,24 +101,25 @@ class Store {
 // DOM Load Event
 document.addEventListener('DOMContentLoaded', Store.displayTodos);
 
-// Event Listener for add book
+// Event Listener for add todo
 document.getElementById('todo-form').addEventListener('submit', function (e) {
   // Get form values
-  const title = document.getElementById('title').value;
-  // date = document.getElementById('date').value;
+  const title = document.getElementById('title').value,
+    date = document.getElementById('date').value;
+  // time = document.getElementById('time').value;
 
-  // Instantiate book
-  const todo = new Todo(title);
+  // Instantiate todo
+  const todo = new Todo(title, date);
 
   // Instantiate UI
   const ui = new UI();
 
   // Validate
-  if (title === '') {
+  if (title === '' || date === '') {
     // Error alert
     ui.showAlert('Please fill in all fields', 'error');
   } else {
-    // Add book to list
+    // Add todo to list
     ui.addTodoToList(todo);
 
     // Add to LS
@@ -136,7 +140,7 @@ document.getElementById('todo-list').addEventListener('click', function (e) {
   // Instantiate UI
   const ui = new UI();
 
-  // Delete book
+  // Delete todo
   ui.deleteTodo(e.target);
 
   // Remove from LS
