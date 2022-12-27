@@ -26,7 +26,7 @@ body {
   margin: 0 auto;
   overflow: auto;
   font-family: 'Encode Sans', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   user-select: none;
   overflow: auto;
   -webkit-font-smoothing: antialiased;
@@ -68,38 +68,31 @@ html::placeholder {
 
 .form {
   max-width: 50rem;
-  font-family: 'Mulish', sans-serif;
-  color: #fff;
 }
 
-.input-field {
-  font-weight: 200;
-  /* margin-bottom: -2rem; */
-}
 .input-field label {
   color: #fff;
   font-size: clamp(1.2rem, 2vw, 2rem);
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .table {
   width: 100%;
   max-width: 60rem;
-  font-family: 'Mulish', sans-serif;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 0.5rem;
 }
 .table * {
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 .table th {
-  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-size: clamp(1.6rem, 2vw, 2rem);
 }
 .table td {
-  font-size: clamp(1rem, 2vw, 1.6rem);
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
 }
 .table th:last-child,
 .table td:last-child {
@@ -178,7 +171,6 @@ html::placeholder {
   }
   .table {
     background: transparent;
-    /* margin-top: -4rem; */
   }
   .table th:first-of-type,
   .table td:first-of-type {
