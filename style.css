@@ -105,7 +105,7 @@ html::placeholder {
   content: '';
   height: 44px;
   width: 44px;
-  left: -4px;
+  left: -6px;
   bottom: 4px;
   top: 0;
   bottom: 0;
@@ -122,9 +122,9 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(55px);
-  -ms-transform: translateX(55px);
-  transform: translateX(55px);
+  -webkit-transform: translateX(45px);
+  -ms-transform: translateX(45px);
+  transform: translateX(45px);
   background: #000 url('favicon/Moon.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
