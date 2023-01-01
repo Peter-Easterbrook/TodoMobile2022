@@ -64,24 +64,24 @@ html::placeholder {
 }
 
 .container {
-  width: min(40rem, 100vw);
+  width: min(40rem, 100%);
   margin: 0 auto;
-  padding-top: 3rem;
+  padding-top: clamp(2rem, 1.6rem, 3rem);
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem;
 }
-.form input {
-  box-shadow: var(--inset-shadow);
-}
+
 .input-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
-  width: min(20rem, 90%);
+  width: min(23rem, 100%);
   margin: 0.4rem auto;
 }
 
@@ -94,7 +94,7 @@ html::placeholder {
 }
 
 .input-size {
-  width: min(20rem, 90%);
+  width: min(23rem, 100%);
   padding: clamp(0.2rem, 0.6rem, 1rem);
   border-radius: 50px;
   border: 1px solid #fff;
@@ -103,6 +103,7 @@ html::placeholder {
   font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 300;
   background: #00142a;
+  box-shadow: var(--inset-shadow);
   transition: all 0.2s ease-out;
 }
 
@@ -133,7 +134,6 @@ html::placeholder {
 }
 
 #submit {
-  width: min(20rem, 90%);
   background: rgb(0, 20, 42);
   color: #fff;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -157,6 +157,7 @@ html::placeholder {
 
 .table {
   width: 100%;
+  max-width: fit-content;
   margin: 0 auto;
   color: #fff;
   padding: 2rem;
