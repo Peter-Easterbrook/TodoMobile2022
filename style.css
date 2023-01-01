@@ -41,7 +41,7 @@ body {
     #120026,
     #10001e,
     #0c0017,
-    #06000e,
+    #01000e,
     #000000
   );
   animation: fadeInAnimation 2s ease-out 1 forwards;
@@ -73,7 +73,7 @@ html::placeholder {
 .form {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: 1rem;
 }
 
@@ -96,14 +96,14 @@ html::placeholder {
 
 .input-size {
   width: min(23rem, 100%);
-  padding: clamp(0.2rem, 2vw, 1rem);
+  padding: clamp(0.2rem, 2vw, 0.6rem);
   border-radius: 50px;
   border: 1px solid #fff;
   outline: none;
   color: #fff;
   font-size: clamp(1rem, 3vw, 1.5rem);
   font-weight: 300;
-  background: #00142a;
+  background: #01000e;
   box-shadow: var(--inset-shadow);
   transition: all 0.2s ease-out;
 }
@@ -112,20 +112,17 @@ html::placeholder {
 .error {
   max-width: 23rem;
   text-align: center;
-  padding: 6px;
-  margin: 5px 0 15px 0;
+  padding: clamp(0.2rem, 2vw, 0.6rem);
   border-radius: 3rem;
   margin: 0 auto;
 }
 .success {
   background-color: #08ff08;
   color: #000;
-  margin: 0.4rem auto;
 }
 .error {
   background-color: #e10600;
   color: #fff;
-  margin: 0.4rem auto;
 }
 
 .delete {
@@ -136,7 +133,7 @@ html::placeholder {
 }
 
 #submit {
-  background: rgb(0, 20, 42);
+  background: #01000e;
   color: #fff;
   font-size: clamp(1rem, 2vw, 1.5rem);
   border-radius: 50px;
@@ -198,6 +195,9 @@ html::placeholder {
   color: red;
 }
 @media screen and (max-width: 600px) {
+  table {
+    width: 100%;
+  }
   .table th:first-of-type,
   .table td:first-of-type {
     width: 55%;
