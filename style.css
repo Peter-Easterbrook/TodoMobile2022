@@ -67,7 +67,7 @@ html::placeholder {
 .container {
   width: min(40rem, 100%);
   margin: 0 auto;
-  padding-top: clamp(2rem, 1.6rem, 3rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
 }
 
 .form {
@@ -89,19 +89,19 @@ html::placeholder {
 .input-field label {
   text-align: left;
   color: #fff;
-  font-size: clamp(1.2rem, 1.6vw, 2rem);
+  font-size: clamp(1.2rem, 3vw, 2rem);
   font-weight: 300;
   margin-bottom: 0.2rem;
 }
 
 .input-size {
   width: min(23rem, 100%);
-  padding: clamp(0.2rem, 0.6rem, 1rem);
+  padding: clamp(0.2rem, 2vw, 1rem);
   border-radius: 50px;
   border: 1px solid #fff;
   outline: none;
   color: #fff;
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
   font-weight: 300;
   background: #00142a;
   box-shadow: var(--inset-shadow);
@@ -130,7 +130,7 @@ html::placeholder {
 
 .delete {
   text-decoration: none;
-  font-size: clamp(1rem, 1.2rem, 1.4rem);
+  font-size: clamp(1rem, 2vw, 1.4rem);
   /* margin-left: auto; */
   /* text-align: right; */
 }
@@ -171,10 +171,10 @@ html::placeholder {
 }
 .table th {
   text-align: left;
-  font-size: clamp(1.2rem, 1.4vw, 1.6rem);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
 }
 .table td {
-  font-size: clamp(1rem, 1.2vw, 1.4rem);
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .table th:last-child,
