@@ -59,8 +59,9 @@ html::-webkit-scrollbar {
 }
 
 html::placeholder {
-  color: #050030;
-  opacity: 1; /* Firefox */
+  font-weight: 200;
+  opacity: 0.9;
+  color: #fff;
 }
 
 .container {
@@ -109,7 +110,7 @@ html::placeholder {
 
 .success,
 .error {
-  max-width: 20rem;
+  max-width: 23rem;
   text-align: center;
   padding: 6px;
   margin: 5px 0 15px 0;
@@ -119,16 +120,17 @@ html::placeholder {
 .success {
   background-color: #08ff08;
   color: #000;
-  margin: 0.4rem 0;
+  margin: 0.4rem auto;
 }
 .error {
   background-color: #e10600;
   color: #fff;
+  margin: 0.4rem auto;
 }
 
 .delete {
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.2rem, 1.4rem);
   /* margin-left: auto; */
   /* text-align: right; */
 }
