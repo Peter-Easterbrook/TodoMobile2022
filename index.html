@@ -30,12 +30,12 @@
     <meta name="msapplication-TileColor" content="#000" />
     <meta name="theme-color" content="#000" />
     <meta name="robots" content="noimageindex" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
       integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
       crossorigin="anonymous"
-    />
+    /> -->
     <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Todo List 2022</title>
@@ -45,21 +45,23 @@
       <form id="todo-form" class="form">
         <div class="input-field">
           <label for="title">Todo</label>
-          <input type="text" id="title" class="u-full-width" />
+          <input type="text" id="title" class="input-size" />
         </div>
         <div class="input-field">
           <label for="date">Date</label>
-          <input type="date" id="date" class="u-full-width" />
+          <input type="date" id="date" class="input-size" />
         </div>
         <!-- <div class="input-field">
           <label for="time">Time</label>
           <input type="time" id="time" class="u-full-width" />
         </div> -->
-        <button type="submit" id="submit" class="u-full-width">
-          <i class="fas fa-highlighter"></i>
-        </button>
+        <div class="input-field">
+          <button type="submit" id="submit" class="button-input-width">
+            <i class="fas fa-highlighter"></i>
+          </button>
+        </div>
       </form>
-      <table class="u-full-width table">
+      <table class="table">
         <thead>
           <tr>
             <th>Todo</th>
