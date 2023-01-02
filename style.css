@@ -141,7 +141,7 @@ input:checked + .slider:before {
 .container {
   width: min(40rem, 100%);
   margin: 0 auto;
-  padding-top: clamp(2rem, 4vw, 3rem);
+  padding: clamp(2rem, 4vw, 3rem) 0.6rem 0;
 }
 
 .form {
@@ -226,11 +226,9 @@ input:checked + .slider:before {
 
 .table {
   width: 100%;
-  max-width: fit-content;
   margin: 0 auto;
   color: var(--primary-color);
-  padding: 2rem;
-  border-radius: 0.5rem;
+  border-collapse: collapse;
 }
 .table * {
   font-weight: 300;
