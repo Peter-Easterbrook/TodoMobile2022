@@ -168,6 +168,11 @@ input:checked + .slider:before {
   margin-bottom: 0.2rem;
   text-shadow: var(--text-shadow);
 }
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  margin: 0px;
+  margin-right: 20px !important;
+}
 
 .input-size {
   width: min(23rem, 100%);
