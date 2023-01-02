@@ -1,2 +1,4 @@
 # Todo list for mobile
- Updated to add darkmode and add date
+
+This app is intended as a @mobile app@ only.
+Updated to add dark mode and add date

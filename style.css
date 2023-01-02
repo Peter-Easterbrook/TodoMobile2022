@@ -194,7 +194,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   text-align: center;
   padding: clamp(0.2rem, 2vw, 0.6rem);
   border-radius: 3rem;
-  margin: 0.4rem auto;
+  margin: 1rem auto 0.4rem;
   filter: var(--drop-shadow);
 }
 .success {
