@@ -190,7 +190,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
 
 .success,
 .error {
-  max-width: 23rem;
+  max-width: 20rem;
   text-align: center;
   padding: clamp(0.2rem, 2vw, 0.6rem);
   border-radius: 3rem;
