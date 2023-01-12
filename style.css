@@ -141,7 +141,7 @@ input:checked + .slider:before {
 .container {
   width: min(40rem, 100%);
   margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3rem) 0.6rem 0;
+  padding: clamp(2rem, 4vw, 3rem) 0.6rem 2rem;
 }
 
 .form {
