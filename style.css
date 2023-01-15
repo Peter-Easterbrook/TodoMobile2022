@@ -74,8 +74,8 @@ html::placeholder {
 .switch {
   position: relative;
   display: inline-block;
-  width: 80px;
-  height: 30px;
+  width: 45px;
+  height: 20px;
 }
 
 /* Hide default HTML checkbox */
@@ -105,12 +105,12 @@ html::placeholder {
   content: '';
   height: 44px;
   width: 44px;
-  left: -6px;
+  left: -25px;
   bottom: 4px;
   top: 0;
   bottom: 0;
   margin: auto 0;
-  background: #fffff9 url('favicon/sun1.png') no-repeat center;
+  background: #cfebf9 url('favicon/sun1.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
   -webkit-transition: var(--transition);
@@ -122,10 +122,10 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(45px);
-  -ms-transform: translateX(45px);
-  transform: translateX(45px);
-  background: #000 url('favicon/Moon.png') no-repeat center;
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background: #102128 url('favicon/Moon.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
 }
