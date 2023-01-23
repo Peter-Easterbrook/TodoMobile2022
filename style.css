@@ -97,7 +97,7 @@ html::placeholder {
 }
 input::placeholder {
   color: var(--primary-color);
-  font-weight: 200;
+  font-weight: 400;
 }
 .actions {
   width: min(23rem, 100%);
