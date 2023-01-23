@@ -205,6 +205,8 @@ input[type='date']::-webkit-calendar-picker-indicator {
 }
 
 .dateInput {
+  width: 3rem;
+  height: 3rem;
   padding: clamp(0.2rem, 2vw, 0.4rem);
   border-radius: 3rem;
   border: 1px solid #ccc;
