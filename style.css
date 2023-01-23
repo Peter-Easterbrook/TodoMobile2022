@@ -109,6 +109,20 @@ input::placeholder {
   vertical-align: middle;
   margin-top: 1rem;
 }
+.dateInput {
+  width: 3rem;
+  height: 3rem;
+  padding: clamp(0.4rem, 2vw, 0.8rem);
+  border-radius: 3rem;
+  border: 1px solid #ccc;
+  outline: none;
+  color: var(--primary-color);
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  background: var(--grad-dark);
+  filter: var(--drop-shadow);
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
 
 /* The switch - the box around the slider */
 .switch {
@@ -153,7 +167,7 @@ input::placeholder {
   top: 0;
   bottom: 0;
   margin: auto 0;
-  background: #cfebf9 url('favicon/sun1.png') no-repeat center;
+  background: #fff url('favicon/sun1.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
   -webkit-transition: var(--transition);
@@ -202,20 +216,6 @@ input[type='date']::-webkit-calendar-picker-indicator {
   filter: invert(1);
   margin: 0px;
   /* margin-right: 20px !important; */
-}
-
-.dateInput {
-  width: 3rem;
-  height: 3rem;
-  padding: clamp(0.2rem, 2vw, 0.4rem);
-  border-radius: 3rem;
-  border: 1px solid #ccc;
-  outline: none;
-  color: var(--primary-color);
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
-  background: var(--input-toggle);
-  box-shadow: var(--inset-shadow);
-  transition: all 0.2s ease-out;
 }
 
 #submit {
