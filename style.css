@@ -81,6 +81,23 @@ html::placeholder {
   margin: 0 auto;
   padding: 1rem;
 }
+.input-size {
+  width: min(23rem, 100%);
+  padding: clamp(0.2rem, 2vw, 0.6rem);
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  outline: none;
+  color: var(--primary-color);
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 300;
+  background: var(--input-toggle);
+  box-shadow: var(--inset-shadow);
+  transition: all 0.2s ease-out;
+}
+input::placeholder {
+  color: var(--primary-color);
+  font-weight: 200;
+}
 .actions {
   width: min(23rem, 100%);
   padding: clamp(0.2rem, 2vw, 0.6rem);
@@ -90,6 +107,7 @@ html::placeholder {
   text-align: center;
   vertical-align: middle;
   margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 /* The switch - the box around the slider */
@@ -183,19 +201,6 @@ input[type='date']::-webkit-calendar-picker-indicator {
   margin-right: 20px !important;
 }
 
-.input-size {
-  width: min(23rem, 100%);
-  padding: clamp(0.2rem, 2vw, 0.6rem);
-  border-radius: 50px;
-  border: 1px solid #ccc;
-  outline: none;
-  color: var(--primary-color);
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  font-weight: 300;
-  background: var(--input-toggle);
-  box-shadow: var(--inset-shadow);
-  transition: all 0.2s ease-out;
-}
 .dateInput {
   padding: clamp(0.2rem, 2vw, 0.4rem);
   border-radius: 50px;
