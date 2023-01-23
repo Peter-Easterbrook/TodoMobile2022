@@ -66,8 +66,30 @@ html::placeholder {
   font-weight: 200;
   opacity: 0.9;
 }
-.themer {
-  margin: 2rem auto -2rem;
+
+.container {
+  width: min(40rem, 100%);
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem) 0.6rem 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.actions {
+  width: min(23rem, 100%);
+  padding: clamp(0.2rem, 2vw, 0.6rem);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 1rem;
 }
 
 /* The switch - the box around the slider */
@@ -122,9 +144,9 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(50px);
-  -ms-transform: translateX(50px);
-  transform: translateX(50px);
+  -webkit-transform: translateX(40px);
+  -ms-transform: translateX(40px);
+  transform: translateX(40px);
   background: #102128 url('favicon/Moon.png') no-repeat center;
   background-size: contain;
   filter: var(--drop-shadow);
@@ -138,27 +160,14 @@ input:checked + .slider:before {
   border-radius: 2rem;
 }
 
-.container {
-  width: min(40rem, 100%);
-  margin: 0 auto;
-  padding: clamp(2rem, 4vw, 3rem) 0.6rem 2rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.input-field {
+/* .input-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+
   width: min(23rem, 100%);
   margin: 0.4rem auto;
-}
+} */
 
 .input-field label {
   text-align: left;
@@ -182,6 +191,18 @@ input[type='date']::-webkit-calendar-picker-indicator {
   outline: none;
   color: var(--primary-color);
   font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 300;
+  background: var(--input-toggle);
+  box-shadow: var(--inset-shadow);
+  transition: all 0.2s ease-out;
+}
+.dateInput {
+  padding: clamp(0.2rem, 2vw, 0.4rem);
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  outline: none;
+  color: var(--primary-color);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   font-weight: 300;
   background: var(--input-toggle);
   box-shadow: var(--inset-shadow);
@@ -218,8 +239,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   background: var(--grad-dark);
   font-size: clamp(1rem, 2vw, 1.5rem);
   border-radius: 50px;
-  padding: 0.4rem;
-  margin-top: 0.4rem;
+  padding: 0.4rem 0.6rem;
   border: 1px solid #ccc;
   cursor: pointer;
   filter: var(--drop-shadow);

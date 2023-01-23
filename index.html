@@ -35,12 +35,6 @@
     <title>Todo List 2022</title>
   </head>
   <body>
-    <div class="themer">
-      <label id="switch" class="switch">
-        <input type="checkbox" id="toggle" />
-        <span class="slider round"></span>
-      </label>
-    </div>
     <div class="container">
       <form id="todo-form" class="form">
         <div class="input-field">
@@ -52,18 +46,26 @@
             placeholder="Todo..."
           />
         </div>
-        <div class="input-field">
-          <label for="date">Date</label>
-          <input type="date" id="date" class="input-size" />
-        </div>
-        <!-- <div class="input-field">
-          <label for="time">Time</label>
-          <input type="time" id="time" class="u-full-width" />
-        </div> -->
-        <div class="input-field">
-          <button type="submit" id="submit" class="button">
-            <i class="fas fa-highlighter"></i>
-          </button>
+        <div class="actions">
+          <div class="inputSwitch">
+            <label id="switch" class="switch">
+              <input type="checkbox" id="toggle" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+
+          <div class="inputSwitch">
+            <input type="date" id="date" class="dateInput" />
+          </div>
+          <!-- <div class="input-field">
+            <label for="time">Time</label>
+            <input type="time" id="time" class="u-full-width" />
+          </div> -->
+          <div class="inputSwitch">
+            <button type="submit" id="submit" class="button">
+              <i class="fas fa-highlighter"></i>
+            </button>
+          </div>
         </div>
       </form>
       <table class="table">
