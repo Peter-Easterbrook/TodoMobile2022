@@ -26,10 +26,10 @@ html {
 html.dark {
   --primary-color: #fff;
   --secondary-color: #000;
-  --grad-dark: #102128;
-  --grad-light: #2d5567;
-  --input-toggle: #1e3b47;
-  --input-location: #294d5d;
+  --grad-dark: #000e1d;
+  --grad-light: #002244;
+  --input-toggle: #001225;
+  --input-location: #001b37;
   --border: 1px solid #e1eef3;
 }
 
@@ -99,7 +99,7 @@ html::placeholder {
   font-weight: 300;
   font-family: inherit;
   letter-spacing: 1px;
-  background: var(--input-toggle);
+  background: var(--input-location);
   box-shadow: var(--inset-shadow);
   transition: all 0.2s ease-out;
 }
@@ -194,7 +194,7 @@ input:checked + .slider:before {
   /* -webkit-transform: translateX(40px);
   -ms-transform: translateX(40px);
   transform: translateX(40px); */
-  background: #152a32 url('favicon/Moon.png') no-repeat center;
+  background: #001225 url('favicon/Moon.png') no-repeat center;
   background-size: contain;
 }
 
