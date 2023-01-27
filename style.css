@@ -26,11 +26,11 @@ html {
 html.dark {
   --primary-color: #fff;
   --secondary-color: #000;
-  --grad-dark: #000e1d;
-  --grad-light: #002244;
-  --input-toggle: #001225;
-  --input-location: #001b37;
-  --border: 1px solid #e1eef3;
+  --grad-dark: #12181e;
+  --grad-light: #2f3f4f;
+  --input-toggle: #171f27;
+  --input-location: #1a222b;
+  --border: 1px solid #ecf0f3;
 }
 
 *,
@@ -194,7 +194,7 @@ input:checked + .slider:before {
   /* -webkit-transform: translateX(40px);
   -ms-transform: translateX(40px);
   transform: translateX(40px); */
-  background: #001225 url('favicon/Moon.png') no-repeat center;
+  background: #171f27 url('favicon/Moon.png') no-repeat center;
   background-size: contain;
 }
 
