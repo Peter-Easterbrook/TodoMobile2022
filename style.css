@@ -130,7 +130,7 @@ input::placeholder {
   color: var(--primary-color);
   font-size: clamp(0.8rem, 2vw, 1rem);
   background: var(--input-toggle);
-  filter: var(--drop-shadow);
+  /* filter: var(--drop-shadow); */
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
@@ -180,7 +180,7 @@ input::placeholder {
   margin: auto 0;
   background: #22c7ff url('favicon/Sun2.png') no-repeat center;
   background-size: contain;
-  filter: var(--drop-shadow);
+  /* filter: var(--drop-shadow); */
   border: var(--border);
   -webkit-transition: var(--transition);
   transition: var(--transition);
@@ -238,7 +238,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   padding: 0.4rem;
   border: var(--border);
   cursor: pointer;
-  filter: var(--drop-shadow);
+  /* filter: var(--drop-shadow); */
   transition: all 0.2s ease-out;
 }
 .fa-highlighter {
@@ -253,7 +253,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   border-radius: 3rem;
   margin: 0.4rem auto;
   border: 1px solid #fff;
-  filter: var(--drop-shadow);
+  /* filter: var(--drop-shadow); */
 }
 .success {
   background-color: var(--input-toggle);
