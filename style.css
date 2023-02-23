@@ -5,11 +5,11 @@
   --secondary-color: #fff;
   --grad-light: #c4f0ff;
   --grad-dark: #00bfff;
-  --input-toggle: #22c7ff;
+  --input-toggle: #00bfff;
   --drop-shadow: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
   --transition: all 0.3s ease-out;
   --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  --border: 1px solid #fff2d4;
+  --border: 1px solid #fff;
   --box-shadow: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.36),
     0px 2px 2.3px -0.8px hsl(var(--shadow-color) / 0.36),
     -0.1px 5px 5.6px -1.7px hsl(var(--shadow-color) / 0.36),
@@ -178,7 +178,7 @@ input::placeholder {
   top: 4px;
   bottom: 0;
   margin: auto 0;
-  background: #22c7ff url('favicon/Sun2.png') no-repeat center;
+  background: #00bfff url('favicon/Sun2.png') no-repeat center;
   background-size: contain;
   /* filter: var(--drop-shadow); */
   border: var(--border);
