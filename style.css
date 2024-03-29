@@ -17,8 +17,6 @@
 }
 html {
   scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: #0074d5 #000;
   font-weight: 300;
   background-color: #000;
   background: linear-gradient(to bottom, var(--grad-dark), var(--grad-light));
